@@ -8,6 +8,9 @@ from tkinter import filedialog
 root = Tk()  # creating an object named 'root'
 root.title('Music Player')  #assigning the title of the window
 root.geometry("600x470")  #defining the dimensions of the window
+
+
+
 root.configure(bg='#fffafa', 
                highlightbackground="#f5d300",  
                highlightcolor="#f5d300",  
@@ -60,8 +63,8 @@ def play():
             pygame.mixer.music.unpause()
             play_pause_btn.configure(image=pause_btn_img)
             playFlag = True
-    
-    
+
+
 #--------------STOP FUNCTION--------------
 def stop():
     pygame.mixer.music.stop()
@@ -113,9 +116,20 @@ def delete_all_songs():
 
 # --------------PLAY SELECTED SONG FUNCTION--------------
 def playClickedSong(event):
-    global playFlag, firstTimePlay
+    global playFlag, firstTimePlay  #definig two global variabeles 'playFlag' and 'firstTimePlay'
     firstTimePlay = True
     playFlag = False
+
+    if firstTimePlay == True:
+        # to play a song for first time
+        new_song = song_box.get(ANCHOR)  #geeting the clicked song from the playlist
+        new_song = f'C:/Users/karpi/OneDrive/Desktop/Music/{new_song}.mp3'  #definig the path for the song 
+        pygame.mixer.music.load(new_song)  #playing the active/current song
+        pygame.mixer.music.play(loops=0)   # not keeping the song in loop
+        var.set(song_box.get(tkinter.ANCHOR))  #setting the 'var' to display the title of the cureent song on top
+        play_pause_btn.configure(image=pause_btn_img)  #showing the the pause icon
+        firstTimePlay = False 
+        playFlag = True
 
 
 # -----------------SHWOWING THE TITLE OF THE CURRENT PLAYED SONG-------------------
