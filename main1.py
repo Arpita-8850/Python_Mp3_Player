@@ -10,11 +10,12 @@ root.title('Music Player')  #assigning the title of the window
 root.geometry("600x470")  #defining the dimensions of the window
 
 
+bg = PhotoImage(file = "wallpaper.png")
 
-root.configure(bg='#fffafa', 
-               highlightbackground="#f5d300",  
-               highlightcolor="#f5d300",  
-               highlightthickness=5)  
+label1 = Label(root, image = bg, height=453, width=582)
+label1.place(x = 0, y = 0)
+
+root.configure(bg = "white", highlightbackground="blue",  highlightcolor="red",  highlightthickness=7)  
 pygame.mixer.init()  # Initializing PyGame mixer
 
 
@@ -134,7 +135,7 @@ def playClickedSong(event):
 
 # -----------------SHWOWING THE TITLE OF THE CURRENT PLAYED SONG-------------------
 var = tkinter.StringVar() 
-song_title = tkinter.Label(root, font=("calibri 20 underline"), fg = "black", textvariable = var, bg="#fffafa")
+song_title = tkinter.Label(root, font=("calibri 20 underline"), fg = "black", textvariable = var, bg ="white")
 song_title.pack()
 
 
@@ -145,7 +146,7 @@ song_box = Listbox(root,
                    height=15, 
                    highlightcolor="black", 
                    highlightbackground="black",
-                   highlightthickness=2, 
+                   highlightthickness=3, 
                    font="calibri 12",
                    fg="#fffafa", 
                    selectbackground = "#2832c2", 
@@ -155,16 +156,16 @@ song_box.pack(pady=1)  #giving padding on y-axis = 1
 
 
 # ------------------GIVING PATH FOR THE BUTTONS ICONS---------------
-back_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3 player\\icon3\\back.png")
-forward_btn_img= PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3 player\\icon3\\next.png")
-play_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3 player\\icon3\\play.png")
-pause_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3 player\\icon3\\pause.png")
-stop_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3 player\\icon3\\stop.png")
+back_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3-player\\icon3\\back.png")
+forward_btn_img= PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3-player\\icon3\\next.png")
+play_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3-player\\icon3\\play.png")
+pause_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3-player\\icon3\\pause.png")
+stop_btn_img = PhotoImage(file="C:\\Users\\karpi\\OneDrive\\Desktop\\Python\\mp3-player\\icon3\\stop.png")
 
 
 #------------------CREATING A FRAME FOR THE BUTTONS---------------
 # creating a frame for the button so that all the buttons are in one line
-controls_frame = Frame(root, bg = '#fffafa')  
+controls_frame = Label(root, image = bg)
 controls_frame.pack()
 
 
