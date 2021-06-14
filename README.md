@@ -1,5 +1,5 @@
 # Desktop Mp3 Player
-**“Music washes away the dust of everyday life from the soul” -Berthold Auerbach.**
+**“Music washes away the dust of everyday life from the soul” -Berthold Auerbach.**\
 Desktop Mp3 Player is Python tkinter based application with beautiful GUI to listen blissful songs 🎶🎶🎶
 
 ![alt text](https://github.com/Arpita-8850/Python_Mp3_Player/blob/master/Picture.png)
