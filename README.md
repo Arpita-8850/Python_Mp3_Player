@@ -4,7 +4,11 @@
 \
 Desktop Mp3 Player is Python tkinter based application with beautiful GUI to listen blissful songs 🎶🎶🎶
 
-![alt text](https://github.com/Arpita-8850/Python_Mp3_Player/blob/master/Picture.png)
+
+### Demo Video Link 👇🏻👇🏻👇🏻
+https://www.youtube.com/watch?v=5Qd-uLbcnjg
+
+![alt text](https://github.com/Arpita-8850/Python_Mp3_Player/blob/master/Picture.png?raw=true)
 
 ## Tasks it can perform:  
 1. Play, pause, resume and stop a song.
@@ -20,6 +24,3 @@ Desktop Mp3 Player is Python tkinter based application with beautiful GUI to lis
 - pip install pygame
 
 ### To start the program, run main1.py file.
-
-### Demo Video Link 👇🏻👇🏻👇🏻
-https://www.youtube.com/watch?v=5Qd-uLbcnjg
